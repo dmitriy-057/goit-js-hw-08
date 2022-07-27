@@ -31,15 +31,7 @@ function createImagesCardsMarkup(galleryItems) {
     .join("");
 }
 
-galleryContainer.addEventListener("click", onGalleryContainerClick);
-// делегирование клика
-function onGalleryContainerClick(e) {
-  e.preventDefault();
-  const isLink = e.target.classList.contains("gallery__item");
-  if (!isLink) {
-    return;
-  }
-}
+
 // подключение библиотеки SimpleLightbox
 let gallery = new SimpleLightbox(".gallery a", {
   captionsData: "alt",

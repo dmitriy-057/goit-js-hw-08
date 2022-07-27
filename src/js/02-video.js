@@ -19,5 +19,8 @@ function onSaveCurrentTime() {
     const savedCurrentTime = localStorage.getItem("videoplayer-current-time");
     const parsedCurrentTime = JSON.parse(savedCurrentTime);
     console.log("видео было остановвлено на:",parsedCurrentTime);
-    player.setCurrentTime(parsedCurrentTime)
+    if(savedCurrentTime) {
+        player.setCurrentTime(parsedCurrentTime)
+    }
+    
 }
